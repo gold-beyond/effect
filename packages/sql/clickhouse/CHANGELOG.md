@@ -1,5 +1,16 @@
 # @effect/sql-clickhouse
 
+## 4.0.0-rc.116
+
+### Patch Changes
+
+- [#8211](https://github.com/Effect-TS/effect/pull/8211) [`f193ac5`](https://github.com/Effect-TS/effect/commit/f193ac50d11fe6838b5db0357bb7b232e8e696d1) Thanks @arrudaricardo! - Mark the ClickHouse statement compiler with the ClickHouse dialect so dialect-specific SQL fragments select the correct branch.
+
+- [#8210](https://github.com/Effect-TS/effect/pull/8210) [`73e6f4b`](https://github.com/Effect-TS/effect/commit/73e6f4bb94fe6a3d90504460de623b100e7df2f7) Thanks @arrudaricardo! - Use ClickHouse's `ping()` endpoint for connection validation and map failed health checks to `SqlError` values.
+- Updated dependencies [[`8f420bb`](https://github.com/Effect-TS/effect/commit/8f420bb3dc3c9be8c4a48d57dccee201dcb0260d), [`1076170`](https://github.com/Effect-TS/effect/commit/10761707b5cae0a66ef605abd1737ae59a18f5ac), [`f110af1`](https://github.com/Effect-TS/effect/commit/f110af1ac5a54a7d62c2b96e35d4521a09f3fa06), [`51d4a2f`](https://github.com/Effect-TS/effect/commit/51d4a2f08a5c7691dc876415bc9fc0ecf467e153), [`ccfe152`](https://github.com/Effect-TS/effect/commit/ccfe152d11bed497f2d26aba8ef1a3613d0d6746), [`a2c4154`](https://github.com/Effect-TS/effect/commit/a2c4154cf8bcbe455bd43bf7f3f12d9cbf38247c), [`755e863`](https://github.com/Effect-TS/effect/commit/755e863a793e5621183e7992cb3f85d29030ad7b)]:
+  - effect@4.0.0-rc.116
+  - @effect/platform-node@4.0.0-rc.116
+
 ## 4.0.0-rc.115
 
 ### Patch Changes

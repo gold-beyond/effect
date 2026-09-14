@@ -1,5 +1,19 @@
 # @effect/sql-pg
 
+## 4.0.0-rc.116
+
+### Patch Changes
+
+- [#8215](https://github.com/Effect-TS/effect/pull/8215) [`9367dcb`](https://github.com/Effect-TS/effect/commit/9367dcbeda92c6473e9f2d90377663152b285d08) Thanks @hsyntax! - Preserve the original `SqlError` when a PostgreSQL LISTEN connection fails after registration, allowing `Stream.retry` to acquire a new listener. Intentional scope closure still interrupts consumers.
+  
+  Notification queues returned by `PgClient.listen` and `PgConnection.listen` now carry `SqlError`. Update explicit queue and stream type annotations to include this error.
+
+- [#8200](https://github.com/Effect-TS/effect/pull/8200) [`8feeb3c`](https://github.com/Effect-TS/effect/commit/8feeb3c4cdbd0f2e57fa25bb0d6fe3b9509117db) Thanks @tim-smart! - Support `sslmode=prefer` and `sslmode=allow` by trying TLS first, then plaintext if the server declines `SSLRequest`. Unlike libpq, `allow` also tries TLS first. Explicit `ssl` overrides and certificate verification are unchanged. TLS handshake and certificate failures remain fatal. Cancellation never downgrades a TLS session to plaintext.
+
+- [#8224](https://github.com/Effect-TS/effect/pull/8224) [`205066a`](https://github.com/Effect-TS/effect/commit/205066a76f6b131cf5889bb655e755b4bbcdd8c4) Thanks @alvarosevilla95! - Support infallible Effect password providers with no service requirements, refreshed per PostgreSQL connection and schema dump.
+- Updated dependencies [[`8f420bb`](https://github.com/Effect-TS/effect/commit/8f420bb3dc3c9be8c4a48d57dccee201dcb0260d), [`1076170`](https://github.com/Effect-TS/effect/commit/10761707b5cae0a66ef605abd1737ae59a18f5ac), [`f110af1`](https://github.com/Effect-TS/effect/commit/f110af1ac5a54a7d62c2b96e35d4521a09f3fa06), [`51d4a2f`](https://github.com/Effect-TS/effect/commit/51d4a2f08a5c7691dc876415bc9fc0ecf467e153), [`ccfe152`](https://github.com/Effect-TS/effect/commit/ccfe152d11bed497f2d26aba8ef1a3613d0d6746), [`a2c4154`](https://github.com/Effect-TS/effect/commit/a2c4154cf8bcbe455bd43bf7f3f12d9cbf38247c), [`755e863`](https://github.com/Effect-TS/effect/commit/755e863a793e5621183e7992cb3f85d29030ad7b)]:
+  - effect@4.0.0-rc.116
+
 ## 4.0.0-rc.115
 
 ### Patch Changes
